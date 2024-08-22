@@ -80,6 +80,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/img" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -109,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724273350521</updated>
-      <workItem from="1724273351630" duration="31326000" />
+      <workItem from="1724273351630" duration="33099000" />
     </task>
     <task id="LOCAL-00001" summary="JetSetGo site">
       <option name="closed" value="true" />
@@ -167,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724359658032</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pic">
+      <option name="closed" value="true" />
+      <created>1724360241189</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724360241189</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +197,7 @@
     <MESSAGE value="JetSetGo site" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="ignored files" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignored files" />
+    <MESSAGE value="pic" />
+    <option name="LAST_COMMIT_MESSAGE" value="pic" />
   </component>
 </project>
