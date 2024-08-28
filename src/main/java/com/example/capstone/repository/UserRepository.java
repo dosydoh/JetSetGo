@@ -1,9 +1,17 @@
 package com.example.capstone.repository;
 
-import com.example.demo.model.User;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.Optional;
+import com.example.capstone.model.User;
 
-public interface UserRepository extends JpaRepository<email, Long> {
-    findByEmail(String email);
-
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByEmail(String email);
+    Optional<User> findByUsername(String username);
 }
+
+
+
+//}

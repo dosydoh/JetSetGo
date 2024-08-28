@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JetSetGo</title>
+  <link rel="stylesheet" href="/styles.css">
+
+    <meta charset="UTF-8">
+    <title>Destinations</title>
+</head>
+<body>
+  <section>
+    <h2>Your next adventure could be:</h2>
+    <ul th:each="item: ${features}">
+      <li th:text="${item}"/>
+    </ul>
+  </section>
+
+</body>
+</html>
