@@ -3,7 +3,7 @@ package com.example.capstone.services;
 import com.example.capstone.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import com.example.capstone.model.Review;
 import com.example.capstone.repository.ReviewRepository;
@@ -12,6 +12,7 @@ import com.example.capstone.repository.ReviewRepository;
  * Service implementation for handling Review operations.
  */
 @Service
+@Transactional
 public class ReviewServiceImpl implements ReviewService {
 
     @Autowired

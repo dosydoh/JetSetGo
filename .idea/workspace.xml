@@ -15,8 +15,9 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,6 +34,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -48,6 +52,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.JetSetGoApplicationTests.contextLoads.executor": "Run",
+    "JUnit.JetSetGoApplicationTests.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.login.html.executor": "Run",
     "JavaScript Debug.registration.html.executor": "Run",
@@ -69,7 +75,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Sybase ASE",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -90,7 +96,38 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.JetSetGoApplicationTests.contextLoads">
+    <configuration name="JetSetGoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.capstone.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.capstone" />
+      <option name="MAIN_CLASS_NAME" value="com.example.capstone.JetSetGoApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JetSetGoApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.capstone.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.capstone" />
+      <option name="MAIN_CLASS_NAME" value="com.example.capstone.JetSetGoApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JetSetGoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="capstone" />
@@ -99,6 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JetSetGoApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.JetSetGoApplicationTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -117,7 +160,8 @@
       <option name="presentableId" value="Default" />
       <updated>1724273350521</updated>
       <workItem from="1724273351630" duration="33099000" />
-      <workItem from="1724365907494" duration="74638000" />
+      <workItem from="1724365907494" duration="139176000" />
+      <workItem from="1725036195696" duration="15270000" />
     </task>
     <task id="LOCAL-00001" summary="JetSetGo site">
       <option name="closed" value="true" />
@@ -207,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724809964770</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="pic">
+      <option name="closed" value="true" />
+      <created>1724810045597</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1724810045597</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

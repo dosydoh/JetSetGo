@@ -12,7 +12,7 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="cap_jetset" />
+          <node kind="schema" qname="jet_set_go" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

@@ -1,23 +1,10 @@
 package com.example.capstone.services;
 
-
-import com.example.capstone.model.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import java.util.Optional;
+import com.example.capstone.model.User;
+import com.example.capstone.repository.UserRegistration;
 
 public interface UserService extends UserDetailsService {
-
-    User saveUser(User user);
-
-    Optional<User> getUserById(Long id);
-
-    Optional<User> getUserByEmail(String email);
-
-    Optional<User> getUserByUsername(String username);
-
-    User updateUser(Long id, User updatedUser);
-
-    void deleteUser(Long id);
-
-    Iterable<User> getAllUsers();
+    User findByEmail(String email);
+    User save(UserRegistration registration);
 }

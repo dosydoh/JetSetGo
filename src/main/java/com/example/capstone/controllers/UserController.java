@@ -1,53 +1,58 @@
-package com.example.capstone.controllers;
-
-
-import com.example.capstone.model.User;
-import com.example.capstone.services.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.http.ResponseEntity;
-import java.util.Optional;
-
-
-
-@RestController
-@RequestMapping("/users")
-public class UserController {
-
-    @Autowired
-    private UserService userService;
-
-    @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody User user) {
-        User createdUser = userService.saveUser(user);
-        return ResponseEntity.ok(createdUser);
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) {
-        Optional<User> user = userService.getUserById(id);
-        return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
-        if (userService.getUserById(id).isPresent()) {
-            user.setId(id);  // Ensure that the ID is set correctly
-            User updatedUser = userService.updateUser(id, user);
-            return ResponseEntity.ok(updatedUser);  // Return the updated user
-        }
-        return ResponseEntity.notFound().build();
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-        if (userService.getUserById(id).isPresent()) {
-            userService.deleteUser(id);
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.notFound().build();
-    }
-}
+//package com.example.capstone.controllers;
+//
+//
+//import com.example.capstone.model.User;
+//import com.example.capstone.services.UserService;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.web.bind.annotation.*;
+//import org.springframework.http.ResponseEntity;
+//import java.util.Optional;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+//
+//
+//@RestController
+//@RequestMapping("/users")
+//public class UserController {
+//
+//    @Autowired
+//    private UserService userService;
+//
+//    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+//
+//
+//    @PostMapping
+//    public ResponseEntity<User> createUser(@RequestBody User user) {
+//        logger.info("Creating user: {}", user);
+//        User createdUser = userService.saveUser(user);
+//        return ResponseEntity.ok(createdUser);
+//    }
+//
+//    @GetMapping("/{id}")
+//    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+//        Optional<User> user = userService.getUserById(id);
+//        return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+//    }
+//
+//    @PutMapping("/{id}")
+//    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
+//        if (userService.getUserById(id).isPresent()) {
+//            user.setId(id);  // Ensure that the ID is set correctly
+//            User updatedUser = userService.updateUser(id, user);
+//            return ResponseEntity.ok(updatedUser);  // Return the updated user
+//        }
+//        return ResponseEntity.notFound().build();
+//    }
+//
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+//        if (userService.getUserById(id).isPresent()) {
+//            userService.deleteUser(id);
+//            return ResponseEntity.noContent().build();
+//        }
+//        return ResponseEntity.notFound().build();
+//    }
+//}
 
 
 //FIRST DRAFT////

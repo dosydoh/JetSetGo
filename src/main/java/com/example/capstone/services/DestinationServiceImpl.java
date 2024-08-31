@@ -3,7 +3,7 @@ package com.example.capstone.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.capstone.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import com.example.capstone.model.Destination;
 import com.example.capstone.repository.DestinationRepository;
@@ -12,6 +12,7 @@ import com.example.capstone.repository.DestinationRepository;
  * Service implementation for handling Destination operations.
  */
 @Service
+@Transactional
 public class DestinationServiceImpl implements DestinationService {
 
     @Autowired

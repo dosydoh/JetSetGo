@@ -1,68 +1,58 @@
 package com.example.capstone.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 
 @Entity
-@Table(name = "reviews")
+@Table(name = "review")
 public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "destination_id", nullable = false)
-    private Destination destination;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @Column(name = "last_name")
+    private String lastName;
 
-    @Column(name = "rating")
-    private int rating;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "comment")
-    private String comment;
 
-    // Getters and setters
+    public Review() {
 
+    }
+
+    public Review(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Destination getDestination() {
-        return destination;
+    public String getFirstName() {
+        return firstName;
     }
-
-    public void setDestination(Destination destination) {
-        this.destination = destination;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-
-    public User getUser() {
-        return user;
+    public String getLastName() {
+        return lastName;
     }
-
-    public void setUser(User user) {
-        this.user = user;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
-
-    public int getRating() {
-        return rating;
+    public String getEmail() {
+        return email;
     }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
