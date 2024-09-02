@@ -21,44 +21,23 @@ public class SecurityConfig  {
     @Autowired
     private UserServiceImpl userService;
 
-    /*@Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                    .antMatchers(
-                            "/registration**",
-                            "/js/**",
-                            "/css/**",
-                            "/img/**",
-                            "/webjars/**").permitAll()
-                    .anyRequest().authenticated()
-                .and()
-                    .formLogin()
-                        .loginPage("/login")
-                            .permitAll()
-                .and()
-                    .logout()
-                        .invalidateHttpSession(true)
-                        .clearAuthentication(true)
-                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                        .logoutSuccessUrl("/login?logout")
-                .permitAll()
-                // Handle logout
-                .and()
-                .logout().invalidateHttpSession(true).clearAuthentication(true)
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/logoutSuccess").permitAll();
-    }
- */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         System.out.println("===========>IN filterChain() ");
-        http.authorizeHttpRequests().requestMatchers(
-                        "/registration**",
-                        "/js/**",
-                        "/css/**",
-                        "/img/**",
-                        "/webjars/**").permitAll().anyRequest().authenticated().and().formLogin()
+        http.authorizeHttpRequests()
+                .requestMatchers(
+                        "/",                    //Home page
+                        "/index**",             //index page
+                        "/registration**",      //registration page
+                        "/booking**",           //bookings page
+                        "/destinations",        //destinations page
+                        "/css/**",         //all ss files in this directory
+                        "/img/**",         //all images in this directory
+                        "/js/**",           //javascript files
+                        "/templates/**",  //all html and jss files in this directory
+                        "/webjars/**"           //webjar files for js/css libraries
+                ).permitAll()
+                .anyRequest().authenticated().and().formLogin()
                 .loginPage("/login").permitAll().and().logout()
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
@@ -90,3 +69,33 @@ public class SecurityConfig  {
 
 
 }
+
+    /*@Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                    .antMatchers(
+                            "/registration**",
+                            "/js/**",
+                            "/css/**",
+                            "/img/**",
+                            "/webjars/**").permitAll()
+                    .anyRequest().authenticated()
+                .and()
+                    .formLogin()
+                        .loginPage("/login")
+                            .permitAll()
+                .and()
+                    .logout()
+                        .invalidateHttpSession(true)
+                        .clearAuthentication(true)
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                        .logoutSuccessUrl("/login?logout")
+                .permitAll()
+                // Handle logout
+                .and()
+                .logout().invalidateHttpSession(true).clearAuthentication(true)
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/logoutSuccess").permitAll();
+    }
+ */

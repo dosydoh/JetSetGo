@@ -13,7 +13,7 @@ import java.util.List;
  * Controller class for handling Booking related web requests.
  */
 @Controller
-@RequestMapping("/bookings")
+@RequestMapping("/booking")
 public class BookingController {
 
     @Autowired
@@ -22,8 +22,8 @@ public class BookingController {
     @GetMapping
     public String listBookings(Model model) {
         List<Booking> bookings = bookingService.getAllBookings();
-        model.addAttribute("bookings", bookings);
-        return "bookings";
+        model.addAttribute("booking", bookings);
+        return "booking";
     }
 
     @GetMapping("/{id}")
@@ -36,13 +36,13 @@ public class BookingController {
     @PostMapping
     public String createBooking(@ModelAttribute Booking booking) {
         bookingService.createBooking(booking);
-        return "redirect:/bookings";
+        return "redirect:/booking";
     }
 
     @PutMapping("/{id}")
     public String updateBooking(@PathVariable Long id, @ModelAttribute Booking booking) {
         bookingService.updateBooking(id, booking);
-        return "redirect:/bookings";
+        return "redirect:/booking";
     }
 
     @DeleteMapping("/{id}")

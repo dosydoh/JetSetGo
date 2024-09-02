@@ -2,27 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" type="text/css"
-          th:href="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="/css/styles.css">
 
     <title>Registration</title>
-</head>
+
 <body>
+<img src="/img/background.png" height="400" width="1850"/>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
+            <!--button type="button" class="navbar-toggle collapsed"
                     data-toggle="collapse" data-target="#navbar" aria-expanded="false"
                     aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span> <span
                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                     class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" th:href="@{/}">Registration and
-                Login Module</a>
+            </button-->
+            <!--a class="navbar-brand" href="#" th:href="@{/}">Registration and
+                Login Module</a-->
         </div>
     </div>
 </nav>
@@ -108,7 +106,7 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success">Register</button>
-                    <span>Already registered? <a href="/" th:href="@{/login}">Login
+                    <span>Already registered? <a href="/static" th:href="@{/login}">Login
 								here</a></span>
                 </div>
 
@@ -117,9 +115,10 @@
     </div>
 </div>
 
-<script type="text/javascript"
+<!--script type="text/javascript"
         th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.2.1/jquery.min.js}"></script>
 <script type="text/javascript"
-        th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+        th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script-->
+</head>
 </body>
 </html>

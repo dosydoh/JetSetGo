@@ -80,13 +80,19 @@ public class MainController {
         }
 
         System.out.println("USER ROLE Defaults to Regular USER");
-        return "redirect:/booking";
+        return "redirect:/index";
     }
 
     @GetMapping("/admin")
     public String admin(Model model) {
         System.out.println("IN  MainController->admin()");
         return "admin";
+    }
+
+    @GetMapping("/index")
+    public String index(Model model) {
+        System.out.println("IN  MainController->index()");
+        return "index";
     }
 
     @GetMapping("/login")

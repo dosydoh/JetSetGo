@@ -18,6 +18,7 @@
         <option value="HTML File" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -65,14 +66,14 @@
     "Spring Boot.JetSetGoApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/dosydoh/IdeaProjects/capstone",
+    "last_opened_file_path": "/Users/dosydoh/IdeaProjects/capstone/src/main/resources/static/js",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.sourceCode.Sybase ASE",
@@ -90,13 +91,19 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/src/img" />
-      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JetSetGoApplicationTests.contextLoads">
+  <component name="RunManager" selected="Spring Boot.JetSetGoApplication">
     <configuration name="JetSetGoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone" />
       <extension name="coverage">
@@ -161,7 +168,7 @@
       <updated>1724273350521</updated>
       <workItem from="1724273351630" duration="33099000" />
       <workItem from="1724365907494" duration="139176000" />
-      <workItem from="1725036195696" duration="15270000" />
+      <workItem from="1725036195696" duration="75881000" />
     </task>
     <task id="LOCAL-00001" summary="JetSetGo site">
       <option name="closed" value="true" />
@@ -259,7 +266,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724810045597</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="barebones running!">
+      <option name="closed" value="true" />
+      <created>1725143360364</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725143360364</updated>
+    </task>
+    <task id="LOCAL-00014" summary="barebones running!">
+      <option name="closed" value="true" />
+      <created>1725143421161</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725143421161</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +304,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="ignored files" />
     <MESSAGE value="pic" />
-    <option name="LAST_COMMIT_MESSAGE" value="pic" />
+    <MESSAGE value="barebones running!" />
+    <MESSAGE value="barebones w/ html" />
+    <option name="LAST_COMMIT_MESSAGE" value="barebones w/ html" />
   </component>
 </project>
