@@ -58,6 +58,7 @@
     "JUnit.JetSetGoApplicationTests.executor": "Run",
     "JavaScript Debug.booking.html.executor": "Run",
     "JavaScript Debug.create_user.html.executor": "Run",
+    "JavaScript Debug.destinations.html.executor": "Run",
     "JavaScript Debug.edit_user.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.login.html.executor": "Run",
@@ -70,7 +71,7 @@
     "Spring Boot.JetSetGoApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/dosydoh/IdeaProjects/capstone/src/main/resources/static/js",
+    "last_opened_file_path": "/Users/dosydoh/IdeaProjects/capstone/src/main/resources/static/img",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -96,8 +97,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -149,8 +150,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JetSetGoApplicationTests.contextLoads" />
         <item itemvalue="JUnit.JetSetGoApplicationTests" />
+        <item itemvalue="JUnit.JetSetGoApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +173,7 @@
       <updated>1724273350521</updated>
       <workItem from="1724273351630" duration="33099000" />
       <workItem from="1724365907494" duration="139176000" />
-      <workItem from="1725036195696" duration="111138000" />
+      <workItem from="1725036195696" duration="120648000" />
     </task>
     <task id="LOCAL-00001" summary="JetSetGo site">
       <option name="closed" value="true" />
@@ -302,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725323302132</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="FULLY FUNCTIONAL BAREBONES!">
+      <option name="closed" value="true" />
+      <created>1725332459663</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1725332459663</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +338,7 @@
     <MESSAGE value="barebones running!" />
     <MESSAGE value="So far so good!&#10;CSS &amp; JS is working, need to connect pages" />
     <MESSAGE value="CRUD FINALLY WORKS!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRUD FINALLY WORKS!!!!!" />
+    <MESSAGE value="FULLY FUNCTIONAL BAREBONES!" />
+    <option name="LAST_COMMIT_MESSAGE" value="FULLY FUNCTIONAL BAREBONES!" />
   </component>
 </project>
