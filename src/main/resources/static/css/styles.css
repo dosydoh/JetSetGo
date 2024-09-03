@@ -6,7 +6,12 @@ body,html{
     background-image: url("https://assets.codepen.io/721952/sky.jpg");
     background-size: cover;
     font-family:"SUSE", sans-serif;
-    font-size:40px;
+    font-size:20px;
+    text-align: center;
+}
+
+table {
+    font-family:"SUSE", sans-serif;
     text-align: center;
 }
 
@@ -22,6 +27,7 @@ div{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 }
 
 
@@ -46,6 +52,8 @@ nav {
 nav {
     /**background-image: url("https://assets.codepen.io/721952/sky.jpg");**/
     padding: 10px 0;
+    font-family:"SUSE", sans-serif;
+    text-align: center;
 }
 
 nav ul {

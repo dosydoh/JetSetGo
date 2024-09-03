@@ -43,7 +43,7 @@ public class SecurityConfig  {
                 .anyRequest().authenticated()
                 .and().formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/booking/new", true) // Redirect to /booking/new after successful login
+                .defaultSuccessUrl("/booking", true) // Redirect to /booking/new after successful login
                 .permitAll().and().logout()
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
@@ -73,7 +73,7 @@ public class SecurityConfig  {
     @Bean
     public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
         return new HiddenHttpMethodFilter();
-    }
+   }
 
 
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

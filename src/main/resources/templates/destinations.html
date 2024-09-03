@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JetSetGo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <nav>
+    <div class="topnav" id="myTopnav">
+      <ul>
+        <li><a href="/static" th:href="@{/index}">Home</a></li>
+        <li><a href="/static" th:href="@{/login}">Login</a></li>
+        <li><a href="/static" th:href="@{/registration}">Registration</a></li>
+        <li><a href="/static" th:href="@{/booking}">Bookings</a></li>
+        <li><a href="/static" th:href="@{/destinations}">Destinations</a></li>
+        <li><a class="nav-link" th:href="@{/logout}">Logout</a></li>
+        <i class="fa fa-bars"></i>
+        </a>
+      </ul>
 
-    <meta charset="UTF-8">
-    <title>Destinations</title>
+    </div>
+  </nav>
+
 </head>
 <body>
-
-</body>
-</html>
+<img src="/img/background.png" height="400" width="1750"/>

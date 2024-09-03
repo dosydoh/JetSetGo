@@ -53,7 +53,7 @@ public class BookingController {
         return "edit_user";
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public String updateBooking(@PathVariable Long id, @ModelAttribute("user") Booking booking) {
         bookingService.updateBooking(id, booking);
         return "redirect:/booking";

@@ -172,7 +172,7 @@
       <updated>1724273350521</updated>
       <workItem from="1724273351630" duration="33099000" />
       <workItem from="1724365907494" duration="139176000" />
-      <workItem from="1725036195696" duration="101783000" />
+      <workItem from="1725036195696" duration="111138000" />
     </task>
     <task id="LOCAL-00001" summary="JetSetGo site">
       <option name="closed" value="true" />
@@ -294,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725251558706</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="CRUD FINALLY WORKS!!!!!">
+      <option name="closed" value="true" />
+      <created>1725323302132</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725323302132</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +328,7 @@
     <MESSAGE value="barebones w/ html" />
     <MESSAGE value="barebones running!" />
     <MESSAGE value="So far so good!&#10;CSS &amp; JS is working, need to connect pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="So far so good!&#10;CSS &amp; JS is working, need to connect pages" />
+    <MESSAGE value="CRUD FINALLY WORKS!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD FINALLY WORKS!!!!!" />
   </component>
 </project>
