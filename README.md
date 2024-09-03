@@ -18,4 +18,9 @@ Business use case:
 
 
 Challenges endured:
-Organizing thoughts, plans, layouts, tables
+*Organizing thoughts, plans, layouts, tables
+*File directories unorganized making src attributes difficult
+*securityconfig got in the way of allowing access to other webapp components
+*405 request method not supported error
+*issues with updating and delete operations
+
