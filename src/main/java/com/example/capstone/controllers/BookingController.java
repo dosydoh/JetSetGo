@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.util.List;
 
 /**
@@ -22,15 +23,21 @@ public class BookingController {
     @GetMapping
     public String listBookings(Model model) {
         List<Booking> bookings = bookingService.getAllBookings();
-        model.addAttribute("booking", bookings);
+        model.addAttribute("users", bookings);
         return "booking";
     }
 
-    @GetMapping("/{id}")
-    public String getBooking(@PathVariable Long id, Model model) {
-        Booking booking = bookingService.getBookingById(id);
-        model.addAttribute("booking", booking);
-        return "booking-details";
+//    @GetMapping("/{id}/edit")
+//    public String getBooking(@PathVariable Long id, Model model) {
+//        Booking booking = bookingService.getBookingById(id);
+//        model.addAttribute("booking", booking);
+//        return "booking-details";
+//    }
+
+    @GetMapping("/new")    //////keep an eye on this one ////
+    public String createBookingForm(Model model) {
+        model.addAttribute("user", new Booking()); // Prepare an empty Booking object for the form
+        return "create_user";
     }
 
     @PostMapping
@@ -39,15 +46,22 @@ public class BookingController {
         return "redirect:/booking";
     }
 
-    @PutMapping("/{id}")
-    public String updateBooking(@PathVariable Long id, @ModelAttribute Booking booking) {
+    @GetMapping("/{id}/edit")
+    public String editBookingForm(@PathVariable Long id, Model model) {
+        Booking booking = bookingService.getBookingById(id);
+        model.addAttribute("user", booking); // Prepare existing Booking object for editing
+        return "edit_user";
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.POST)
+    public String updateBooking(@PathVariable Long id, @ModelAttribute("user") Booking booking) {
         bookingService.updateBooking(id, booking);
         return "redirect:/booking";
     }
 
-    @DeleteMapping("/{id}")
+    @RequestMapping(value = "/{id}/delete", method = RequestMethod.DELETE)
     public String deleteBooking(@PathVariable Long id) {
         bookingService.deleteBooking(id);
-        return "redirect:/bookings";
+        return "redirect:/booking";
     }
 }

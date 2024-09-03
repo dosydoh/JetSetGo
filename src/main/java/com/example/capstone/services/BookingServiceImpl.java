@@ -46,9 +46,10 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void deleteBooking(Long id) {
-        if (!bookingRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Booking not found with id " + id);
-        }
         bookingRepository.deleteById(id);
+        //if (!bookingRepository.existsById(id)) {
+          //  throw new ResourceNotFoundException("Booking not found with id " + id);
+        //}
+
     }
 }

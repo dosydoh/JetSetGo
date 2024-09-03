@@ -13,6 +13,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.filter.HiddenHttpMethodFilter;  //filter responsible for converting PST requests with _mthod parameters into appropriate HTTP methods like delete, put
+
 
 @EnableWebSecurity
 @Configuration
@@ -37,12 +39,18 @@ public class SecurityConfig  {
                         "/templates/**",  //all html and jss files in this directory
                         "/webjars/**"           //webjar files for js/css libraries
                 ).permitAll()
-                .anyRequest().authenticated().and().formLogin()
-                .loginPage("/login").permitAll().and().logout()
+                .requestMatchers("/booking/**").authenticated()
+                .anyRequest().authenticated()
+                .and().formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/booking/new", true) // Redirect to /booking/new after successful login
+                .permitAll().and().logout()
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/login?logout").permitAll();
+                .logoutSuccessUrl("/login?logout").permitAll()
+                .and()
+                .csrf().ignoringRequestMatchers("/booking**"); // Optional: Enable CSRF for all but specific paths
         return http.build();
     }
     //You may declare @Bean methods as static, allowing for them to be called without
@@ -62,6 +70,11 @@ public class SecurityConfig  {
         return auth;
     }
 
+    @Bean
+    public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
+        return new HiddenHttpMethodFilter();
+    }
+
 
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authenticationProvider());
@@ -69,33 +82,3 @@ public class SecurityConfig  {
 
 
 }
-
-    /*@Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                    .antMatchers(
-                            "/registration**",
-                            "/js/**",
-                            "/css/**",
-                            "/img/**",
-                            "/webjars/**").permitAll()
-                    .anyRequest().authenticated()
-                .and()
-                    .formLogin()
-                        .loginPage("/login")
-                            .permitAll()
-                .and()
-                    .logout()
-                        .invalidateHttpSession(true)
-                        .clearAuthentication(true)
-                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                        .logoutSuccessUrl("/login?logout")
-                .permitAll()
-                // Handle logout
-                .and()
-                .logout().invalidateHttpSession(true).clearAuthentication(true)
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/logoutSuccess").permitAll();
-    }
- */

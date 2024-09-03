@@ -3,9 +3,6 @@ package com.example.capstone.controllers;
 import java.util.Collection;
 import java.util.List;
 
-//import javax.servlet.http.HttpSession;
-
-
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -20,37 +17,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.capstone.model.Role;
 import com.example.capstone.model.User;
 import com.example.capstone.services.UserService;
+import com.example.capstone.services.BookingService;
 
 
 @Controller
 public class MainController {
 
     @Autowired
-    private UserService userService;
+    private UserService userService;   //user related operations
 
-//    @GetMapping("/")
-//    public String root(HttpSession session,Authentication authentication) {
-//        //return "index";
-//    	System.out.println("IN  MainController->root()");
-//    	System.out.println(">>>>>>>USER ="+authentication.getName());
-//    	User existing = userService.findByEmail(authentication.getName());
-//    	System.out.println("User firstName="+existing.getFirstName());
-//    	System.out.println("User lastName="+existing.getLastName());
-//    	System.out.println("User Id="+existing.getId());
-//
-//		System.out.println("USER ROLE="+existing.getRoles());
-//
-//
-//		java.util.Collection<Role> roles = existing.getRoles();
-//		String userRole = roles.toString();
-//		System.out.println("COLLECTION USER ROLE="+userRole);
-//
-//		if(userRole.equals("[ROLE_SUPER]")) {
-//			return "redirect:/admin";
-//		}
-//
-//		return "redirect:/students";
-//    }
+    @Autowired
+    private BookingService bookingService;    //booking account related operations
+
 
     //
     // UPDATE users_roles   user_id to point to role_id that is superuser in role table
